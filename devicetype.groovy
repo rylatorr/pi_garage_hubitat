@@ -108,7 +108,7 @@ private getHostAddress() {
 def getRequest(path) {
     log.debug "Sending request for ${path} from ${device.deviceNetworkId}"
 
-    new physicalgraph.device.HubAction(
+    new hubitat.device.HubAction(
         'method': 'GET',
         'path': path,
         'headers': [
@@ -200,7 +200,7 @@ private subscribeAction(path, callbackPath="") {
     def port = convertHexToInt(getDataValue("port"))
     ip = ip + ":" + port
 
-    def result = new physicalgraph.device.HubAction(
+    def result = new hubitat.device.HubAction(
         method: "SUBSCRIBE",
         path: path,
         headers: [

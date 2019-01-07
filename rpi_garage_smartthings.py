@@ -234,7 +234,7 @@ class GarageMonitor(object):
                 req = agent.request(
                     'POST',
                     subscription,
-                    Headers({'CONTENT-LENGTH': [str(len(msg))]}),
+                    Headers(),
                     body)
                 req.addCallback(self.handle_response)
                 req.addErrback(self.handle_error)

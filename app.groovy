@@ -41,7 +41,7 @@ def selectPiPage() {
 
     // Perform M-SEARCH
     log.debug('Performing discovery')
-    sendHubCommand(new physicalgraph.device.HubAction("lan discovery urn:schemas-upnp-org:device:RPi_Garage_Monitor:", physicalgraph.device.Protocol.LAN))
+    sendHubCommand(new hubitat.device.HubAction("lan discovery urn:schemas-upnp-org:device:RPi_Garage_Monitor:", hubitat.device.Protocol.LAN))
 
     def devicesForDialog = getDevicesForDialog()
 
